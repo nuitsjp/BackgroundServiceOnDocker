@@ -2,6 +2,14 @@
 
 これはWindows Server CoreのDockerコンテナー上でBackgroundServiceを利用したWindowsサービスが正しく起動できない事象の再現リポジトリーです。
 
+# 解決策
+
+とりあえず選択肢は3つ
+
+1. .NET 7で修正されているので、それに置き換える
+2. .NET 6にバックポートされるらしいので、少し待つ
+3. [System.ServiceProcess.ServiceControllerを使う](https://zenn.dev/nuits_jp/articles/windows-service-for-docker-windows-container)
+
 # 分かってること
 
 - .NET Frameworkに昔からあるServiceBaseで作ったものは動く
